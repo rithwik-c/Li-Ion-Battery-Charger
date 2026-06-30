@@ -1,10 +1,10 @@
-# 🔋 Li-Ion Battery Charger Simulation using CC-CV Mode
+# Li-Ion Battery Charger Simulation using CC-CV Mode
 
-A MATLAB/Simulink implementation of a **Lithium-Ion Battery Charger** based on the **Constant Current–Constant Voltage (CC-CV)** charging algorithm using a **closed-loop Buck Converter**. The model demonstrates the charging process of a Li-Ion battery while ensuring safe charging by automatically transitioning from constant current to constant voltage mode.
+A MATLAB/Simulink implementation of a **Lithium-Ion Battery Charger** based on the **Constant Current–Constant Voltage (CC-CV)** charging algorithm. The model demonstrates the charging process of a Li-Ion battery while ensuring safe charging by automatically transitioning from constant current to constant voltage mode.
 
 ---
 
-## 📌 Overview
+##  Overview
 
 Lithium-Ion batteries require a controlled charging profile to maximize battery life, improve efficiency, and prevent overcharging. This project implements the industry-standard **CC-CV charging method** in Simulink using feedback control.
 
@@ -15,7 +15,7 @@ The charger operates in two stages:
 
 ---
 
-## ✨ Features
+##  Features
 
 - Closed-loop Buck Converter
 - CC-CV charging algorithm
@@ -27,7 +27,7 @@ The charger operates in two stages:
 
 ---
 
-## ⚙️ Working Principle
+##  Working Principle
 
 ### Constant Current (CC) Mode
 
@@ -41,20 +41,9 @@ The charger operates in two stages:
 
 ---
 
-## 🛠️ Simulation Components
 
-- DC Input Source
-- Buck Converter
-- PWM Generator
-- PI Controller
-- Feedback Control Loop
-- Li-Ion Battery Model
-- Voltage and Current Sensors
-- Scope Blocks
 
----
-
-## 📈 Expected Results
+##  Expected Results
 
 The simulation demonstrates:
 
@@ -66,40 +55,16 @@ The simulation demonstrates:
 
 ---
 
-## 📂 Project Structure
-
-```
-.
-├── Simulation.slx
-├── README.md
-└── Images/
-    ├── model.png
-    ├── voltage_waveform.png
-    ├── current_waveform.png
-    └── cc_cv_transition.png
-```
-
----
-
-## 💻 Software Requirements
-
-- MATLAB
-- Simulink
-- Simscape Electrical
-
----
-
-## 🚀 Applications
+##  Applications
 
 - Battery Management Systems (BMS)
 - Electric Vehicle (EV) Chargers
 - Portable Electronics
 - Renewable Energy Storage Systems
-- Power Electronics Education
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Temperature-dependent charging
 - State of Charge (SOC) estimation
@@ -108,17 +73,6 @@ The simulation demonstrates:
 - Fast charging techniques
 - Hardware implementation using embedded controllers
 
----
-
-## 📷 Simulation Preview
-
-> Add screenshots of the Simulink model and output waveforms here.
-
-| Simulink Model | CC-CV Charging Waveforms |
-|---------------|--------------------------|
-| *(Add Image)* | *(Add Image)* |
-
----
 
 ## 👨‍💻 Author
 
