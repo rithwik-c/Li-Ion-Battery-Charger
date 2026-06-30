@@ -1,109 +1,131 @@
-Li-Ion Battery Charger Simulation using CC-CV Control (Simulink)
+# 🔋 Li-Ion Battery Charger Simulation using CC-CV Mode
 
-A MATLAB/Simulink model of a Lithium-Ion Battery Charger implementing the Constant Current–Constant Voltage (CC-CV) charging algorithm using a closed-loop buck converter.
+A MATLAB/Simulink implementation of a **Lithium-Ion Battery Charger** based on the **Constant Current–Constant Voltage (CC-CV)** charging algorithm using a **closed-loop Buck Converter**. The model demonstrates the charging process of a Li-Ion battery while ensuring safe charging by automatically transitioning from constant current to constant voltage mode.
 
-The simulation demonstrates the complete charging process, where the battery is initially charged at a constant current and automatically transitions to constant voltage mode as the battery reaches its rated voltage.
+---
 
-Overview
+## 📌 Overview
 
-Lithium-Ion batteries require a controlled charging strategy to ensure:
+Lithium-Ion batteries require a controlled charging profile to maximize battery life, improve efficiency, and prevent overcharging. This project implements the industry-standard **CC-CV charging method** in Simulink using feedback control.
 
-Safe operation
-Longer battery life
-Higher charging efficiency
-Prevention of overcharging
+The charger operates in two stages:
 
-This project implements the industry-standard CC-CV charging method using a DC-DC buck converter regulated through closed-loop control.
+- **Constant Current (CC):** Charges the battery at a fixed current until the battery voltage reaches its maximum charging voltage.
+- **Constant Voltage (CV):** Maintains a constant battery voltage while the charging current gradually decreases until the battery is fully charged.
 
-Features
-🔋 Closed-loop Li-Ion battery charger
-⚡ Buck converter topology
-🔄 Automatic transition between CC and CV modes
-🎯 PI controller-based voltage/current regulation
-📈 Real-time monitoring of:
-Battery Voltage
-Charging Current
-State of Charge (SOC)
-Converter Output
-Charging Algorithm
-1. Constant Current (CC) Mode
-The charger supplies a fixed charging current.
-Battery voltage gradually increases.
-This mode provides fast charging while keeping current within safe limits.
-2. Constant Voltage (CV) Mode
-Once the battery reaches its rated voltage, the charger switches to constant voltage mode.
-Output voltage is maintained at the battery's maximum charging voltage.
-Charging current gradually decreases until it reaches the termination threshold.
+---
 
-This charging profile closely follows the charging methodology used in commercial Li-Ion battery chargers.
+## ✨ Features
 
-Simulation Components
-DC Input Source
-Buck Converter
-PWM Generator
-PI Controller
-Feedback Control System
-Li-Ion Battery Model
-Voltage & Current Measurement Blocks
-Scope Blocks for waveform visualization
-Control Strategy
+- Closed-loop Buck Converter
+- CC-CV charging algorithm
+- Automatic mode transition (CC → CV)
+- PI Controller for voltage/current regulation
+- PWM-based switching control
+- Real-time monitoring of battery voltage and charging current
+- Simulink implementation suitable for learning and research
 
-The controller continuously measures the battery voltage and current and adjusts the PWM duty cycle of the buck converter.
+---
 
-During CC mode:
-Current is regulated to the reference charging current.
-During CV mode:
-Voltage is regulated to the battery's rated charging voltage.
+## ⚙️ Working Principle
 
-The controller automatically transitions between both modes without user intervention.
+### Constant Current (CC) Mode
 
-Expected Results
+- The controller regulates the converter to supply a constant charging current.
+- Battery voltage increases gradually as charging progresses.
+
+### Constant Voltage (CV) Mode
+
+- Once the battery reaches its rated charging voltage, the controller maintains a constant output voltage.
+- Charging current naturally tapers off until it reaches the termination level.
+
+---
+
+## 🛠️ Simulation Components
+
+- DC Input Source
+- Buck Converter
+- PWM Generator
+- PI Controller
+- Feedback Control Loop
+- Li-Ion Battery Model
+- Voltage and Current Sensors
+- Scope Blocks
+
+---
+
+## 📈 Expected Results
 
 The simulation demonstrates:
 
-Constant charging current during the initial charging stage.
-Smooth rise in battery voltage.
-Automatic switching from CC mode to CV mode.
-Gradual reduction in charging current during CV mode.
-Stable battery terminal voltage throughout the final charging stage.
-Software Requirements
-MATLAB
-Simulink
-Simscape Electrical (recommended)
-Simscape Power Systems (if applicable)
-Repository Structure
+- Constant charging current during the initial charging stage
+- Gradual increase in battery voltage
+- Smooth transition from CC mode to CV mode
+- Decreasing charging current during CV mode
+- Stable battery terminal voltage at the end of charging
+
+---
+
+## 📂 Project Structure
+
+```
 .
 ├── Simulation.slx
 ├── README.md
-└── Images/            (optional screenshots)
-Applications
-Battery Management Systems (BMS)
-Electric Vehicle (EV) Chargers
-Portable Electronics
-Renewable Energy Storage Systems
-Power Electronics Education
-Future Improvements
-Temperature-dependent charging
-Cell balancing for battery packs
-State of Charge (SOC) estimation
-State of Health (SOH) estimation
-Fast charging algorithms
-Hardware implementation using embedded controllers
-License
+└── Images/
+    ├── model.png
+    ├── voltage_waveform.png
+    ├── current_waveform.png
+    └── cc_cv_transition.png
+```
+
+---
+
+## 💻 Software Requirements
+
+- MATLAB
+- Simulink
+- Simscape Electrical
+
+---
+
+## 🚀 Applications
+
+- Battery Management Systems (BMS)
+- Electric Vehicle (EV) Chargers
+- Portable Electronics
+- Renewable Energy Storage Systems
+- Power Electronics Education
+
+---
+
+## 🔮 Future Improvements
+
+- Temperature-dependent charging
+- State of Charge (SOC) estimation
+- State of Health (SOH) estimation
+- Cell balancing for battery packs
+- Fast charging techniques
+- Hardware implementation using embedded controllers
+
+---
+
+## 📷 Simulation Preview
+
+> Add screenshots of the Simulink model and output waveforms here.
+
+| Simulink Model | CC-CV Charging Waveforms |
+|---------------|--------------------------|
+| *(Add Image)* | *(Add Image)* |
+
+---
+
+## 👨‍💻 Author
+
+**Rithwik Chander**
+
+---
+
+## 📄 License
 
 This project is intended for educational and research purposes.
-
-Author
-
-Rithwik Chander
-
-Suggested screenshots to include in your GitHub repository
-
-To make the repository more attractive, add screenshots of:
-
-Simulink model overview
-Buck converter subsystem
-Battery voltage waveform
-Charging current waveform
-CC to CV transition waveform
-State of Charge (SOC) curve
